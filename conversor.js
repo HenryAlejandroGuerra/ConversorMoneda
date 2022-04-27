@@ -26,6 +26,8 @@ $(document).ready(function () {
                 respuesta = cant * 1.14;
             } else if(tipo2 == "yen"){
                 respuesta = cant * 128.31;
+            } else if(tipo2 == "pesoMex"){
+                respuesta = cant * 21.66;
             } else {
                 respuesta = cant;
             }
@@ -34,6 +36,18 @@ $(document).ready(function () {
                 respuesta = cant * 0.88;
             } else if(tipo2 == "yen"){
                 respuesta = cant * 112.73;
+            } else if(tipo2 == "pesoMex"){
+                respuesta = cant * 20.35;
+            } else {
+                respuesta = cant;
+            }
+        } else if(tipo1 == "pesoMex"){
+            if(tipo2 == "euro"){
+                respuesta = cant * 0.88;
+            } else if(tipo2 == "yen"){
+                respuesta = cant * 112.73;
+            } else if(tipo2 == "dolar"){
+                respuesta = cant * 0.049;
             } else {
                 respuesta = cant;
             }
@@ -42,6 +56,8 @@ $(document).ready(function () {
                 respuesta = cant * 0.0078;
             } else if(tipo2 == "dolar"){
                 respuesta = cant * 0.0089;
+            } else if(tipo2 == "pesoMex"){
+                respuesta = cant * 0.16;
             } else {
                 respuesta = cant;
             }
@@ -70,6 +86,8 @@ $(document).ready(function () {
             $("#span1").html("<b>€</b>");
         } else if(moneda1 == "dolar"){
             $("#span1").html("<b>$</b>");
+        } else if(moneda1 == "pesoMex"){
+            $("#span1").html("<b>$</b>");
         } else {
             $("#span1").html("<b>¥</b>");
         }
@@ -88,6 +106,8 @@ $(document).ready(function () {
         if(moneda2 == "euro"){
             $("#span2").html("<b>€</b>");
         } else if(moneda2 == "dolar"){
+            $("#span2").html("<b>$</b>");
+        } else if(moneda2 == "pesoMex"){
             $("#span2").html("<b>$</b>");
         } else {
             $("#span2").html("<b>¥</b>");

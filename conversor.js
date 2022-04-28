@@ -28,6 +28,8 @@ $(document).ready(function () {
                 respuesta = cant * 128.31;
             } else if(tipo2 == "pesoMex"){
                 respuesta = cant * 21.66;
+            } else if(tipo2 == "pesoArg"){
+                respuesta = cant * 121.22;
             } else {
                 respuesta = cant;
             }
@@ -38,6 +40,8 @@ $(document).ready(function () {
                 respuesta = cant * 112.73;
             } else if(tipo2 == "pesoMex"){
                 respuesta = cant * 20.35;
+            } else if(tipo2 == "pesoArg"){
+                respuesta = cant * 115.02;
             } else {
                 respuesta = cant;
             }
@@ -48,6 +52,20 @@ $(document).ready(function () {
                 respuesta = cant * 112.73;
             } else if(tipo2 == "dolar"){
                 respuesta = cant * 0.049;
+            } else if(tipo2 == "pesoArg"){
+                respuesta = cant * 5.63;
+            } else {
+                respuesta = cant;
+            }
+        } else if(tipo1 == "pesoArg"){
+            if(tipo2 == "euro"){
+                respuesta = cant *0.0082;
+            } else if(tipo2 == "yen"){
+                respuesta = cant * 1.12;
+            } else if(tipo2 == "dolar"){
+                respuesta = cant *0.0087;
+            } else if(tipo2 == "pesoMex"){
+                respuesta = cant * 0.18;
             } else {
                 respuesta = cant;
             }
@@ -58,6 +76,8 @@ $(document).ready(function () {
                 respuesta = cant * 0.0089;
             } else if(tipo2 == "pesoMex"){
                 respuesta = cant * 0.16;
+            } else if(tipo2 == "pesoArg"){
+                respuesta = cant * 0.89;
             } else {
                 respuesta = cant;
             }
@@ -86,6 +106,8 @@ $(document).ready(function () {
             $("#span1").html("<b>€</b>");
         } else if(moneda1 == "dolar"){
             $("#span1").html("<b>$</b>");
+        } else if(moneda1 == "pesoArg"){
+            $("#span2").html("<b>$</b>");
         } else if(moneda1 == "pesoMex"){
             $("#span1").html("<b>$</b>");
         } else {
@@ -107,8 +129,11 @@ $(document).ready(function () {
             $("#span2").html("<b>€</b>");
         } else if(moneda2 == "dolar"){
             $("#span2").html("<b>$</b>");
+        } else if(moneda2 == "pesoArg"){
+            $("#span2").html("<b>$</b>");
         } else if(moneda2 == "pesoMex"){
             $("#span2").html("<b>$</b>");
+            
         } else {
             $("#span2").html("<b>¥</b>");
         }
